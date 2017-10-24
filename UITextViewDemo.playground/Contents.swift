@@ -12,17 +12,17 @@ paragraph.alignment = .center
 
 let attributes = [NSAttributedStringKey.paragraphStyle: paragraph, NSAttributedStringKey.font:UIFont.systemFont(ofSize: 17.0)]
 
-let fullText =  NSMutableAttributedString(string: "Keep your kids on track by  checking out the list of your children's homework each night. Homework is marked with {icon}", attributes: attributes)
+let fullText =  NSMutableAttributedString(string: "Embedded custom UIView ==> {icon}", attributes: attributes)
 
 // range of substring to search
 let str1 = fullText.string as NSString
 let range = str1.range(of: "{icon}")
 
 if range.location != NSNotFound {
-    let textView = UITextView(frame: CGRect(x: 50, y: 10, width: 280, height: 102))
+    let textView = UITextView(frame: CGRect(x: 40, y: 10, width: 300, height: 102))
     textView.font = UIFont.systemFont(ofSize: 17)
-    textView.backgroundColor = UIColor.white
-    textView.textAlignment = .center
+    textView.backgroundColor = UIColor.lightGray
+    textView.textAlignment = .left
     textView.attributedText = fullText
     containerView.addSubview(textView)
     
